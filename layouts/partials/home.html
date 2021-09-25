@@ -1,0 +1,30 @@
+<div class="main">
+    <div class="main__container">
+        <div class="main__image">
+            <img src={{.Site.Params.avatarURL | relURL}} alt="pic" id="main__img">
+        </div>
+        <div class="main__content">
+            <h1>{{.Site.Params.author}}</h1>
+            <p>{{.Site.Params.description}}</p>
+        </div>
+        {{ with .Site.Params.social }}
+        <div class="main__social">
+            <ul class="social__list">
+            {{ range sort . "weight" }}
+                {{ if .icon }}
+                <li class="social__icon">
+                    <a href="{{ .url | safeURL }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }} {{ if .type }}type="{{ .type }}"{{ end }}>
+                    <i class="{{ .icon }}" aria-hidden="true"></i>
+                    </a>
+                </li class="social__icon">
+                {{ else }}
+                <li>
+                    <a href="{{ .url | safeURL }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }}>{{ .name }}</a>
+                </li>
+                {{ end }}
+            {{ end }}
+            </ul>
+        {{ end }}
+        </div>
+    </div>
+</div>

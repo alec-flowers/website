@@ -1,0 +1,48 @@
+baseURL = "https://mynewhugosite.com"
+title = "alec_flowers"
+
+# site Params
+[params]
+logo = "&#127800;"
+author = "Alec Flowers"
+description = "Data Science Student, ex-financial analyst"
+avatarURL = "images/af_head.jpeg"
+
+
+[[params.social]]
+name = "Github"
+icon = "fa fa-github"
+weight = 1
+url = "https://github.com/alec-flowers"
+
+[[params.social]]
+name = "Linkedin"
+icon = "fa fa-linkedin"
+weight = 2
+url = "https://www.linkedin.com/in/alec-flowers/"
+
+[[params.social]]
+name = "Goodreads"
+icon = "fab fa-goodreads"
+weight = 3
+url = "https://www.goodreads.com/user/show/75670726-alec-flowers"
+
+
+[menu]
+[[menu.main]]
+identifier = "About Me"
+name = "About Me"
+url = "/about_me"
+weight = 10
+
+[[menu.main]]
+identifier = "Latest Work"
+name = "Latest Work"
+url = "/latest_work"
+weight = 20
+
+[[menu.main]]
+identifier = "Blog"
+name = "Blog"
+url = "/blog"
+weight = 20

@@ -1,0 +1,22 @@
+<!-- <!DOCTYPE html>
+<html lang="en"> -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Site.Params.author}}</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/caf2234e90.js" crossorigin="anonymous"></script>
+</head>
+
+<nav class="navbar">
+    <div class="navbar__container">
+        <a href="" id="navbar__logo">{{.Site.Params.logo | emojify}}</a>
+    </div>
+    <ul class="navbar__menu">
+        {{ range .Site.Menus.main}}
+            <li class="navbar__item">
+              <a class="navbar__links" href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+        {{ end }}
+    </ul>
+</nav>    
